@@ -4,3 +4,4 @@ scikit-learn
 matplotlib
 tensorflow  # optional: remove if you prefer scikit-learn-only models
 pillow
+pyqt5
