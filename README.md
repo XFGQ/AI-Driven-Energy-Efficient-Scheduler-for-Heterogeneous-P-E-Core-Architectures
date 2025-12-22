@@ -34,7 +34,7 @@ Requirements
     * `psutil` (System monitoring)
     * `matplotlib` (Graphing)
     * `scikit-learn` & `joblib` (Data scaling)
-    * [cite_start]See `requirements.txt` for the full list[cite: 369].
+    * See `requirements.txt` for the full list.
 
 ## Installation (Windows)
 
