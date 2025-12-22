@@ -69,6 +69,40 @@ python -m pip install -r requirements.txt
 
 If these files are missing the Dashboard will exit with an error message: "Model dosyaları eksik!".
 
+---
+
+## ✅ Installation (Linux / macOS)
+
+1. Clone or copy the project folder to your machine and open a terminal in the project root.
+2. Ensure Python 3 and venv support are installed (Ubuntu/Debian example):
+
+```bash
+sudo apt update
+sudo apt install python3 python3-venv python3-pip -y
+# Install system deps for GUI/display if needed (Ubuntu example)
+sudo apt install libgl1-mesa-glx libglib2.0-0 -y
+```
+
+3. Create and activate a virtual environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+4. Upgrade pip and install Python dependencies (remove inline comments from `requirements.txt` if present):
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+# or install tensorflow separately if required for the Dashboard:
+# python -m pip install tensorflow
+```
+
+5. Verify `advanced_scheduler_model.h5` and `advanced_scaler.pkl` are present in the project root — the Dashboard exits if they are missing.
+
+Notes: On some Linux distributions you may need to install additional system libraries to support PyQt5, matplotlib or TensorFlow; consult your distro's package manager and the relevant package docs.
+
 
 ## ▶️ Running the Project
 
@@ -149,4 +183,4 @@ If you'd like, I can:
 
 ---
 
-Thank you — let me know if you want formatting changed, extra badges, or a license added. ✅
+Thank you
