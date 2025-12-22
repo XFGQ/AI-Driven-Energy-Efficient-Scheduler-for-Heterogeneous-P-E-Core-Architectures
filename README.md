@@ -4,7 +4,7 @@ An AI-based Scheduler designed for modern hybrid CPUs that balances performance 
 
 ---
 
-## 📌 Overview
+## Overview
 
 **What it does:**
 
@@ -13,34 +13,30 @@ This project uses a trained AI model to decide, in real-time, whether workloads 
 > "Instead of using simple static rules, we trained a Deep Learning model that acts as the system's brain. The AI monitors real-time CPU/RAM and decides P-Core vs E-Core allocations. The Dashboard visualizes decisions and energy savings compared to a standard OS."
 
 
-## 🚀 Features
+## Key Features
 
-- Real-time AI-driven core scheduling simulation
-- PyQt5 GUI Dashboard with live graphs and kernel logs
-- Built-in CPU stress test (GUI-controlled and standalone script)
-- Includes pre-trained model (`advanced_scheduler_model.h5`) and scaler (`advanced_scaler.pkl`)
-
-
-## ⚙️ Requirements
-
-Recommended: Python 3.8–3.11 on Windows (project was tested on Windows).
-
-Primary dependencies (see `requirements.txt`):
-
-- numpy
-- pandas
-- scikit-learn
-- matplotlib
-- pillow
-- pyqt5
-- psutil
-- pyqtgraph
-- tensorflow (optional, required to run the Dashboard with the included model)
-
-Note:`requirements.txt` file contains an inline comment on the `tensorflow` line — pip may fail if the inline comment remains. Remove any inline comments (or run `pip install tensorflow` separately) before installing.
+* **AI-Driven Scheduling:** Uses a TensorFlow/Keras model (`advanced_scheduler_model.h5`) to predict optimal core types.
+* **Interactive Dashboard:** A professional PyQt5 GUI displaying real-time core maps, temperature, frequency, and power consumption.
+* **Energy Analysis:** Live comparison graphs between "Standard OS" and "AI-Driven" power usage.
+* **Stress Testing:** Includes a GUI-controlled stress test and a standalone script (`main_cpu_stress.py`) to simulate 100% CPU load.
+* **System Logging:** Integrated kernel log view for monitoring scheduler decisions.
 
 
-## ✅ Installation (Windows)
+## Requirements
+
+Requirements
+
+* **OS:** Windows (Recommended), Linux, or macOS.
+* **Python:** 3.8+
+* **Dependencies:**
+    * `PyQt5` (GUI Framework)
+    * `TensorFlow` (AI Model inference)
+    * `psutil` (System monitoring)
+    * `matplotlib` (Graphing)
+    * `scikit-learn` & `joblib` (Data scaling)
+    * [cite_start]See `requirements.txt` for the full list[cite: 369].
+
+## Installation (Windows)
 
 1. Clone or copy the project folder to your machine.
 2. Open PowerShell in the project root (where `main_dashboard.py` is located).
@@ -71,7 +67,7 @@ If these files are missing the Dashboard will exit with an error message: "Missi
 
 ---
 
-## ✅ Installation (Linux / macOS)
+## Installation (Linux / macOS)
 
 1. Clone or copy the project folder to your machine and open a terminal in the project root.
 2. Ensure Python 3 and venv support are installed (Ubuntu/Debian example):
@@ -104,7 +100,7 @@ python -m pip install -r requirements.txt
 Notes: On some Linux distributions you may need to install additional system libraries to support PyQt5, matplotlib or TensorFlow; consult your distro's package manager and the relevant package docs.
 
 
-## ▶️ Running the Project
+## Running the Project
 
 - Start the Dashboard (GUI):
 
@@ -127,7 +123,7 @@ python main_cpu_stress.py
 This script spawns a process per CPU core and stresses the CPU for ~30 seconds (can be interrupted with Ctrl+C).
 
 
-## 📷 Screenshots & Assets
+## Screenshots & Assets
 
 Included images (embedded below). Open the files from project root or view here in the repo:
 
@@ -146,14 +142,14 @@ Example previews:
 ![Stress Test](main_image_stress.png)
 
 
-## 🛠 Troubleshooting
+## Troubleshooting
 
 - "Missing the model files!" — make sure `advanced_scheduler_model.h5` and `advanced_scaler.pkl` are in the project root.
 - GUI doesn't start / PyQt5 errors — ensure `pyqt5` is installed for your Python version.
 - `pip install -r requirements.txt` fails — remove inline comments in `requirements.txt` and try installing packages separately.
 
 
-## 🧩 Project Structure
+## Project Structure
 
 ```
 ├─ advanced_scheduler_model.h5
@@ -168,13 +164,13 @@ Example previews:
 ```
 
 
-## ✨ Tips
+## Tips
 
 - If you don't need the Dashboard AI, you can run only `main_cpu_stress.py` (no TensorFlow required).
 - To recreate the model or update it, add your training pipeline and save a new `*.h5` and scaler file.
 
 
-## 📞 Need help?
+## Need help?
 
 If you'd like, I can:
 - Clean `requirements.txt` (remove inline comments) and update it
@@ -182,5 +178,3 @@ If you'd like, I can:
 - Add a short CONTRIBUTING guide
 
 ---
-
-Thank you
