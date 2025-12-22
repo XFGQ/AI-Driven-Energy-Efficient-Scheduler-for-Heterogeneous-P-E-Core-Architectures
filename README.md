@@ -148,7 +148,7 @@ Example previews:
 
 ## 🛠 Troubleshooting
 
-- "Model dosyaları eksik!" — make sure `advanced_scheduler_model.h5` and `advanced_scaler.pkl` are in the project root.
+- "Missing the model files !" — make sure `advanced_scheduler_model.h5` and `advanced_scaler.pkl` are in the project root.
 - GUI doesn't start / PyQt5 errors — ensure `pyqt5` is installed for your Python version.
 - `pip install -r requirements.txt` fails — remove inline comments in `requirements.txt` and try installing packages separately.
 
