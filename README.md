@@ -37,7 +37,7 @@ Primary dependencies (see `requirements.txt`):
 - pyqtgraph
 - tensorflow (optional, required to run the Dashboard with the included model)
 
-Note: Your `requirements.txt` file contains an inline comment on the `tensorflow` line — pip may fail if the inline comment remains. Remove any inline comments (or run `pip install tensorflow` separately) before installing.
+Note:`requirements.txt` file contains an inline comment on the `tensorflow` line — pip may fail if the inline comment remains. Remove any inline comments (or run `pip install tensorflow` separately) before installing.
 
 
 ## ✅ Installation (Windows)
@@ -67,7 +67,7 @@ python -m pip install -r requirements.txt
 - `advanced_scheduler_model.h5`
 - `advanced_scaler.pkl`
 
-If these files are missing the Dashboard will exit with an error message: "Model dosyaları eksik!".
+If these files are missing the Dashboard will exit with an error message: "Missing the model files!".
 
 ---
 
@@ -148,7 +148,7 @@ Example previews:
 
 ## 🛠 Troubleshooting
 
-- "Missing the model files !" — make sure `advanced_scheduler_model.h5` and `advanced_scaler.pkl` are in the project root.
+- "Missing the model files!" — make sure `advanced_scheduler_model.h5` and `advanced_scaler.pkl` are in the project root.
 - GUI doesn't start / PyQt5 errors — ensure `pyqt5` is installed for your Python version.
 - `pip install -r requirements.txt` fails — remove inline comments in `requirements.txt` and try installing packages separately.
 
