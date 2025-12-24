@@ -36,6 +36,20 @@ Requirements
     * `scikit-learn` & `joblib` (Data scaling)
     * See `requirements.txt` for the full list.
 
+## Model Training
+
+The project includes a dedicated training script `train-modal.py` to optimize the scheduler's performance.
+
+### Features:
+* **Automated Training**: Handles the entire pipeline from data loading to model exportation.
+* **Hybrid Architecture Support**: Specifically tuned for Heterogeneous P-E Core architectures.
+* **Model Output**: Generates `advanced_scheduler_model.h5` and scales data using `advanced_scaler.pkl`.
+
+### Usage:
+To retrain the model with your own dataset, run:
+```bash
+python train-modal.py
+
 ## Installation (Windows)
 
 1. Clone or copy the project folder to your machine.
