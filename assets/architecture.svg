@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+  <style> .title { font: 18px sans-serif; fill:#333 } .label { font: 13px sans-serif; fill:#222 } .box { fill:#f7f9fc; stroke:#cbd7e6; stroke-width:2 } .coreP { fill:#ffe6e6; stroke:#ff9999 } .coreE { fill:#e6fff0; stroke:#66c28d } .arrow { stroke:#6b7280; stroke-width:3; fill:none; marker-end:url(#arrow) } </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280" />
+    </marker>
+  </defs>
+  <text x="20" y="25" class="title">AI-Driven Scheduler: High-level Flow</text>
+
+  <!-- Process Queue -->
+  <rect x="20" y="50" width="220" height="200" class="box" rx="8" />
+  <text x="35" y="75" class="label">Incoming Tasks (Process Queue)</text>
+  <g transform="translate(40,95)">
+    <rect x="0" y="0" width="180" height="38" rx="6" fill="#fff" stroke="#d1d5db" />
+    <text x="10" y="24" class="label">Task A • CPU 72% • Mem 120MB</text>
+    <rect x="0" y="48" width="180" height="38" rx="6" fill="#fff" stroke="#d1d5db" />
+    <text x="10" y="72" class="label">Task B • CPU 10% • Mem 30MB</text>
+    <rect x="0" y="96" width="180" height="38" rx="6" fill="#fff" stroke="#d1d5db" />
+    <text x="10" y="120" class="label">Task C • CPU 45% • Mem 80MB</text>
+  </g>
+
+  <!-- Arrow to AI -->
+  <path d="M240 150 L350 150" class="arrow" />
+
+  <!-- AI (Neural Net) -->
+  <rect x="350" y="90" width="200" height="120" rx="10" class="box" />
+  <text x="370" y="115" class="label">AI Decision Engine</text>
+  <!-- simple NN nodes -->
+  <g fill="#4b5563">
+    <circle cx="410" cy="160" r="6" />
+    <circle cx="440" cy="140" r="6" />
+    <circle cx="440" cy="180" r="6" />
+    <circle cx="480" cy="160" r="6" />
+  </g>
+
+  <!-- arrows to cores -->
+  <path d="M550 145 L650 110" class="arrow" />
+  <path d="M550 155 L650 190" class="arrow" />
+
+  <!-- P-Cores -->
+  <rect x="650" y="90" width="220" height="95" rx="8" class="coreP" />
+  <text x="665" y="115" class="label">P-Cores (Performance)</text>
+  <g class="label">
+    <text x="665" y="140">• High single-thread perf</text>
+    <text x="665" y="158">• Power-hungry</text>
+  </g>
+
+  <!-- E-Cores -->
+  <rect x="650" y="195" width="220" height="95" rx="8" class="coreE" />
+  <text x="665" y="220" class="label">E-Cores (Efficiency)</text>
+  <g class="label">
+    <text x="665" y="245">• Energy-efficient</text>
+    <text x="665" y="263">• Lower perf per-thread</text>
+  </g>
+</svg>

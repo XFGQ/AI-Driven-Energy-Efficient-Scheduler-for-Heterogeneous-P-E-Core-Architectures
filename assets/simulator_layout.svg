@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
+  <style> .title { font: 18px sans-serif; fill:#333 } .label { font: 12px sans-serif; fill:#222 } .panel { fill:#ffffff; stroke:#e2e8f0; stroke-width:2 } .queueItem { fill:#f8fafc; stroke:#cbd5e1 } .nn { fill:#fffaf0; stroke:#ffd28a } .coreBlock { fill:#fbfbff; stroke:#dbeafe } .small { font:11px sans-serif; fill:#374151 } .arrow { stroke:#7b8794; stroke-width:2; fill:none; marker-end:url(#a)} </style>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7b8794"/></marker></defs>
+  <text x="20" y="28" class="title">Simulator Mockup (UI Layout)</text>
+
+  <!-- Left panel: Incoming Tasks -->
+  <rect x="20" y="50" width="260" height="280" rx="8" class="panel" />
+  <text x="40" y="80" class="label">Incoming Tasks</text>
+  <g transform="translate(40,95)">
+    <rect x="0" y="0" width="220" height="36" rx="6" class="queueItem"/>
+    <text x="10" y="22" class="small">PID: 1024 • CPU: 70% • Est: 5s</text>
+    <rect x="0" y="50" width="220" height="36" rx="6" class="queueItem"/>
+    <text x="10" y="72" class="small">PID: 1030 • CPU: 8% • Est: 20s</text>
+    <rect x="0" y="100" width="220" height="36" rx="6" class="queueItem"/>
+    <text x="10" y="122" class="small">PID: 1042 • CPU: 30% • Est: 12s</text>
+  </g>
+
+  <!-- Center: AI engine visual -->
+  <rect x="320" y="70" width="260" height="220" rx="10" class="nn" />
+  <text x="360" y="100" class="label">AI Decision Engine</text>
+  <g fill="#0f172a" opacity="0.85">
+    <circle cx="420" cy="160" r="6" />
+    <circle cx="380" cy="140" r="6" />
+    <circle cx="380" cy="180" r="6" />
+    <circle cx="460" cy="140" r="6" />
+    <circle cx="460" cy="180" r="6" />
+  </g>
+
+  <!-- Right: P and E area -->
+  <rect x="620" y="50" width="260" height="130" rx="8" class="coreBlock"/>
+  <text x="640" y="78" class="label">P-Cores</text>
+  <g>
+    <rect x="640" y="90" width="220" height="30" rx="6" fill="#fff1f0" stroke="#ffd6d6" />
+    <text x="650" y="110" class="small">P0 • Busy</text>
+    <rect x="640" y="130" width="220" height="30" rx="6" fill="#fff1f0" stroke="#ffd6d6" />
+    <text x="650" y="150" class="small">P1 • Idle</text>
+  </g>
+
+  <rect x="620" y="190" width="260" height="130" rx="8" class="coreBlock"/>
+  <text x="640" y="218" class="label">E-Cores</text>
+  <g>
+    <rect x="640" y="230" width="220" height="30" rx="6" fill="#f0fff4" stroke="#bfe9d0" />
+    <text x="650" y="250" class="small">E0 • Idle</text>
+    <rect x="640" y="270" width="220" height="30" rx="6" fill="#f0fff4" stroke="#bfe9d0" />
+    <text x="650" y="290" class="small">E1 • Busy</text>
+  </g>
+
+  <!-- Arrows -->
+  <path class="arrow" d="M280 150 L320 150"/>
+  <path class="arrow" d="M580 150 L620 110"/>
+  <path class="arrow" d="M580 170 L620 260"/>
+</svg>
